@@ -1,0 +1,184 @@
+
+NOMBRE: POLICITY_S3_DEV
+************************************************************
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "Statement1",
+			"Effect": "Allow",
+			"Action": [
+				"s3:ListAllMyBuckets",
+				"s3:CreateBucket",
+				"s3:CreateAccessPoint",
+				"s3:CreateAccessPointForObjectLambda",
+				"s3:CreateJob",
+				"s3:PutObject",
+				"s3:PutBucketVersioning",
+				"s3:DeleteObject",
+				"s3:DeleteBucket",
+				"s3:DeleteBucketPolicy",
+				"s3:GetBucketLocation",
+				"s3:ListBucket",
+				"s3:ListBucketVersions",
+				"s3:ListBucketMultipartUploads",
+				"s3:ListAccessGrants",
+				"s3:ListAccessGrantsInstances",
+				"s3:ListAccessGrantsLocations",
+				"s3:ListMultipartUploadParts"
+			],
+			"Resource": [
+				"*"
+			]
+		}
+	]
+}
+
+
+
+
+
+
+
+NOMBRE: POLICITY_CLOUDFORMATION_DEV
+************************************************************
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "Statement2",
+			"Effect": "Allow",
+			"Action": [
+				"cloudformation:CancelUpdateStack",
+				"cloudformation:DescribeType",
+				"cloudformation:DescribeStackEvents",
+				"cloudformation:ActivateType",
+				"cloudformation:ActivateOrganizationsAccess",
+				"cloudformation:DescribeStackInstance",
+				"cloudformation:DescribeStackSetOperation",
+				"cloudformation:DescribeStackResources",
+				"cloudformation:DescribeStackResource",
+				"cloudformation:DescribeStackRefactor",
+				"cloudformation:ValidateTemplate",
+				"cloudformation:ContinueUpdateRollback"
+			],
+			"Resource": ["*"]
+		}
+	]
+}
+
+
+
+
+NOMBRE: POLICITY_SSM_DEV
+************************************************************
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement3",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:GetParameter",
+                "ssm:PutParameter",
+                "ssm:AddTagsToResource",
+                "ssm:DescribeDocumentPermission",
+                "ssm:GetDocument",
+                "ssm:GetParameterHistory",
+                "ssm:GetParameters",
+                "ssm:GetPatchBaseline",
+                "ssm:CreateDocument",
+                "ssm:CreateAssociation",
+                "ssm:CreateActivation",
+                "ssm:DeleteActivation",
+                "ssm:DeleteAssociation",
+                "ssm:DeleteDocument",
+                "ssm:DeleteOpsItem",
+                "ssm:DeleteOpsMetadata",
+                "ssm:DeleteParameter",
+                "ssm:DeleteParameters"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
+
+
+
+
+
+
+
+NOMBRE: POLICITY_IAM_DEV
+************************************************************
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+            "Sid": "Statement4 ",
+			"Effect": "Allow",
+			"Action": [
+				"iam:CreateRole",
+				"iam:GetRole",
+				"iam:PassRole",
+				"iam:TagRole",
+				"iam:AttachRolePolicy",
+				"iam:PutRolePolicy",
+				"iam:DeleteRole",
+				"iam:DeleteRolePolicy",
+				"iam:DetachRolePolicy",
+				"ssm:PutParameter"
+			],
+			"Resource": ["*"]
+		}
+	]
+}
+
+
+NOMBRE: POLICITY_LAMBDA_DEV
+************************************************************
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+            "Sid": "Statement5",
+			"Effect": "Allow",
+			"Action": [
+				"lambda:CreateFunction",
+				"lambda:GetFunction",
+				"lambda:DeleteFunction",
+				"lambda:UpdateFunctionCode",
+				"lambda:UpdateFunctionConfiguration",
+				"lambda:ListVersionsByFunction",
+				"lambda:PublishVersion"
+			],
+			"Resource": "*"
+		}
+	]
+}
+
+
+NOMBRE: POLICITY_LOGS_DEV
+************************************************************
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+            "Sid": "Statement6",
+			"Effect": "Allow",
+			"Action": [
+				"logs:CreateLogGroup",
+				"logs:CreateLogStream",
+				"logs:PutLogEvents",
+				"logs:DescribeLogStreams"
+			],
+			"Resource": "*"
+		}
+	]
+}
+
+
+
+
